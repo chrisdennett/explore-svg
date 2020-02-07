@@ -1,4 +1,25 @@
 const strokeStyleSettings = {
+  strokeLinecap: {
+    label: "stroke-linecap",
+    linke:
+      "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap",
+    type: "select",
+    value: "round",
+    options: {
+      butt: {
+        name: "butt",
+        value: "butt"
+      },
+      round: {
+        name: "round",
+        value: "round"
+      },
+      square: {
+        name: "square",
+        value: "square"
+      }
+    }
+  },
   strokeWidth: {
     label: "strokeWidth (line thickness)",
     link:
@@ -6,14 +27,28 @@ const strokeStyleSettings = {
     type: "range",
     min: 1,
     max: 100,
-    value: 5
+    value: 25
   },
   strokeColor: {
     label: "stroke (colour)",
-    link:
-      "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width",
+    link: "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke",
     type: "colour",
-    value: "#000000"
+    value: {
+      r: 219,
+      g: 62,
+      b: 0,
+      a: 1
+    },
+    palette: [
+      "#B80000",
+      "#DB3E00",
+      "#FCCB00",
+      "#008B02",
+      "#006B76",
+      "#1273DE",
+      "#004DCF",
+      "#5300EB"
+    ]
   }
 };
 
@@ -34,7 +69,7 @@ export const defaultAppData = {
           type: "range",
           min: 0,
           max: 1000,
-          value: 30
+          value: 75
         },
         y1: {
           label: "y1",
@@ -42,7 +77,7 @@ export const defaultAppData = {
           type: "range",
           min: 0,
           max: 1000,
-          value: 30
+          value: 150
         },
         x2: {
           label: "x2",
@@ -58,7 +93,7 @@ export const defaultAppData = {
           type: "range",
           min: 0,
           max: 1000,
-          value: 30
+          value: 330
         }
       }
     }

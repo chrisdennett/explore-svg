@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 // comps
 import TabControls from "./tabControls/TabControls";
-
-import ExternalLink from "../components/externalLink";
 import AttributeControls from "./attributeControls/AttributeControls";
 import StyleControls from "./styleControls/StyleControls";
 
 const Controls = ({ element, updateElement }) => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(1);
 
   const { settings, styleSettings } = element;
 
@@ -54,6 +52,7 @@ export default Controls;
 
 // STYLES
 const Container = styled.div`
+  border-top: 5px solid grey;
   padding-top: 5px;
   background: black;
   color: white;
@@ -61,14 +60,4 @@ const Container = styled.div`
 
 const ControlsUI = styled.div`
   margin: 15px;
-`;
-
-const ExternalLinkHolder = styled.div`
-  text-align: right;
-`;
-
-const StyledExternalLink = styled(ExternalLink)`
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
 `;

@@ -2,9 +2,16 @@ import React from "react";
 
 export const Line = ({ attributeSettings, styleSettings }) => {
   const { x1, y1, x2, y2 } = attributeSettings;
-  const { strokeWidth } = styleSettings;
+  const { strokeWidth, strokeColor, strokeLinecap } = styleSettings;
 
-  const styles = { strokeWidth: strokeWidth.value, stroke: "#000" };
+  const { r, g, b, a } = strokeColor.value;
+  const colour = `rgb(${r}, ${g}, ${b}, ${a} )`;
+
+  const styles = {
+    strokeWidth: strokeWidth.value,
+    stroke: colour,
+    strokeLinecap: strokeLinecap.value
+  };
 
   return (
     <line
