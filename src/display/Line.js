@@ -6,7 +6,8 @@ export const Line = ({ attributeSettings, styleSettings }) => {
     strokeWidth,
     strokeColor,
     strokeLinecap,
-    strokeDasharray
+    strokeDasharray,
+    strokeDashoffset
   } = styleSettings;
 
   const { r, g, b, a } = strokeColor.value;
@@ -19,7 +20,8 @@ export const Line = ({ attributeSettings, styleSettings }) => {
   const styles = {
     strokeWidth: strokeWidth.value,
     stroke: colour,
-    strokeDasharray: strokeDashArrayValue
+    strokeDasharray: strokeDashArrayValue,
+    strokeDashoffset: strokeDashoffset.value
   };
 
   if (!isDashed) {

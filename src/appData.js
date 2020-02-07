@@ -8,6 +8,7 @@ const strokeStyleSettings = {
     max: 100,
     value: 25
   },
+
   strokeColor: {
     label: "stroke (colour)",
     link: "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke",
@@ -35,25 +36,39 @@ const strokeStyleSettings = {
     link:
       "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray",
     type: "select",
-    value: "1",
+    value: "10 5 10",
     options: {
       none: {
         name: "none",
         value: "none"
       },
       1: {
-        name: "single value 1",
-        value: "1"
+        name: "2",
+        value: "2"
       },
       5: {
-        name: "single value 5",
+        name: "5 4 3 2 1",
         value: "5"
       },
+      "10 5 10": {
+        name: "10 5 10",
+        value: "10 5 10"
+      },
       "5 4 3 2 1": {
-        name: "5-4-3-2-1",
+        name: "5 4 3 2 1",
         value: "5 4 3 2 1"
       }
     }
+  },
+
+  strokeDashoffset: {
+    label: "strokeDashoffset",
+    link:
+      "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width",
+    type: "range",
+    min: 1,
+    max: 50,
+    value: 0
   },
 
   strokeLinecap: {
