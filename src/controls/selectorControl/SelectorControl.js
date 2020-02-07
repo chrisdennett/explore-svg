@@ -56,6 +56,7 @@ export default SelectorControl;
 
 const Container = styled.div`
   display: inline-block;
+  padding: 10px 0;
 
   .mdc-select {
     option {

@@ -38,7 +38,7 @@ export default ColourPickerControl;
 const SliderLabel = styled.div`
   width: 100%;
   font-size: 12px;
-  min-height: 30px;
+  min-height: 22px;
   color: rgba(255, 255, 255, 0.5);
   display: inline-flex;
   justify-content: space-between;

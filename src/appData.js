@@ -47,7 +47,7 @@ const strokeStyleSettings = {
         value: "2"
       },
       5: {
-        name: "5 4 3 2 1",
+        name: "5",
         value: "5"
       },
       "10 5 10": {
@@ -59,16 +59,6 @@ const strokeStyleSettings = {
         value: "5 4 3 2 1"
       }
     }
-  },
-
-  strokeDashoffset: {
-    label: "strokeDashoffset",
-    link:
-      "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width",
-    type: "range",
-    min: 1,
-    max: 50,
-    value: 0
   },
 
   strokeLinecap: {
@@ -91,6 +81,16 @@ const strokeStyleSettings = {
         value: "square"
       }
     }
+  },
+
+  strokeDashoffset: {
+    label: "strokeDashoffset",
+    link:
+      "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width",
+    type: "range",
+    min: 1,
+    max: 50,
+    value: 0
   }
 };
 

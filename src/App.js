@@ -47,7 +47,7 @@ function App() {
       </Space.Fill>
 
       {optionsVisible && (
-        <Space.BottomResizable size={220} scrollable={true}>
+        <Space.BottomResizable size={250} scrollable={true}>
           <Controls
             element={currentElement}
             updateElement={updateCurrentElement}
