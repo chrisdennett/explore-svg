@@ -1,25 +1,4 @@
 const strokeStyleSettings = {
-  strokeLinecap: {
-    label: "stroke-linecap",
-    linke:
-      "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap",
-    type: "select",
-    value: "round",
-    options: {
-      butt: {
-        name: "butt",
-        value: "butt"
-      },
-      round: {
-        name: "round",
-        value: "round"
-      },
-      square: {
-        name: "square",
-        value: "square"
-      }
-    }
-  },
   strokeWidth: {
     label: "strokeWidth (line thickness)",
     link:
@@ -49,6 +28,54 @@ const strokeStyleSettings = {
       "#004DCF",
       "#5300EB"
     ]
+  },
+
+  strokeDasharray: {
+    label: "stroke-dasharray",
+    link:
+      "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray",
+    type: "select",
+    value: "1",
+    options: {
+      none: {
+        name: "none",
+        value: "none"
+      },
+      1: {
+        name: "single value 1",
+        value: "1"
+      },
+      5: {
+        name: "single value 5",
+        value: "5"
+      },
+      "5 4 3 2 1": {
+        name: "5-4-3-2-1",
+        value: "5 4 3 2 1"
+      }
+    }
+  },
+
+  strokeLinecap: {
+    label: "stroke-linecap",
+    link:
+      "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap",
+    type: "select",
+    value: "round",
+    options: {
+      butt: {
+        name: "butt",
+        value: "butt"
+      },
+      round: {
+        name: "round",
+        value: "round"
+      },
+      square: {
+        name: "square",
+        value: "square"
+      }
+    }
   }
 };
 

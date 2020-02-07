@@ -2,16 +2,29 @@ import React from "react";
 
 export const Line = ({ attributeSettings, styleSettings }) => {
   const { x1, y1, x2, y2 } = attributeSettings;
-  const { strokeWidth, strokeColor, strokeLinecap } = styleSettings;
+  const {
+    strokeWidth,
+    strokeColor,
+    strokeLinecap,
+    strokeDasharray
+  } = styleSettings;
 
   const { r, g, b, a } = strokeColor.value;
   const colour = `rgb(${r}, ${g}, ${b}, ${a} )`;
 
+  const strokeDashArrayValue = strokeDasharray.value;
+  const isDashed = strokeDashArrayValue !== "none";
+  const strokeLinecapValue = strokeLinecap.value;
+
   const styles = {
     strokeWidth: strokeWidth.value,
     stroke: colour,
-    strokeLinecap: strokeLinecap.value
+    strokeDasharray: strokeDashArrayValue
   };
+
+  if (!isDashed) {
+    styles.strokeLinecap = strokeLinecapValue;
+  }
 
   return (
     <line
