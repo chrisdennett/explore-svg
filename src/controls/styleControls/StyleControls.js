@@ -8,7 +8,7 @@ const StyleControls = ({ settings, updateSettings }) => {
 
   return (
     <div>
-      {settingsKeys.map(key => {
+      {settingsKeys.map((key) => {
         const currSetting = settings[key];
 
         if (currSetting.type === "colour") {
@@ -18,11 +18,10 @@ const StyleControls = ({ settings, updateSettings }) => {
               label={currSetting.label}
               colour={currSetting.value}
               palette={currSetting.palette}
-              onChange={value => updateSettings(key, value)}
+              onChange={(value) => updateSettings(key, value)}
             />
           );
         }
-
         if (currSetting.type === "select") {
           return (
             <SelectorControl
@@ -30,7 +29,7 @@ const StyleControls = ({ settings, updateSettings }) => {
               label={currSetting.label}
               currentOptionKey={currSetting.value}
               options={currSetting.options}
-              onChange={value => updateSettings(key, value)}
+              onChange={(value) => updateSettings(key, value)}
             />
           );
         }
@@ -46,10 +45,12 @@ const StyleControls = ({ settings, updateSettings }) => {
               min={currSetting.min}
               max={currSetting.max}
               value={currSetting.value}
-              onChange={value => updateSettings(key, value)}
+              onChange={(value) => updateSettings(key, value)}
             />
           );
         }
+
+        return null;
       })}
     </div>
   );

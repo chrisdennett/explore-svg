@@ -9,20 +9,20 @@ import { defaultAppData } from "./appData";
 function App() {
   const [appData, setAppData] = useState(defaultAppData);
   const [optionsVisible, setOptionsVisible] = useState(true);
-  const [currentElementKey, setCurrentElementKey] = useState("line");
+  const [currentElementKey] = useState("line");
 
   // values derived from state
   const currentElement = appData.elements[currentElementKey];
-  const { settings, label } = currentElement;
+  const { label } = currentElement;
 
-  const updateCurrentElement = newElementData => {
+  const updateCurrentElement = (newElementData) => {
     const updatedElements = {
       ...appData.elements,
-      [currentElementKey]: newElementData
+      [currentElementKey]: newElementData,
     };
     setAppData({
       ...appData,
-      elements: updatedElements
+      elements: updatedElements,
     });
   };
 
@@ -30,7 +30,7 @@ function App() {
     <Space.ViewPort>
       <Space.Top size={60}>
         <Space.Info>
-          {sizeInfo => (
+          {(sizeInfo) => (
             <TopBar
               title={`${appData.title} : ${label}`}
               infoUrl={appData.infoUrl}
